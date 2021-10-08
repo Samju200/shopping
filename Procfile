@@ -1,1 +1,1 @@
-web: npm run dev
+web: node --experimental-modules backend/server.js
