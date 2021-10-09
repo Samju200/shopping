@@ -9,7 +9,7 @@
     "heroku-postbuild": "npm run install-client && npm run build",
     "start": "node backend/server.js",
     "client": "cd frontend && npm start",
-    "dev": "concurrently \"nodemon backend/server.js\"\"npm run client\""
+    "dev": "concurrently \"node backend/server.js\"\"npm run client\""
   },
   "author": "",
   "license": "ISC",
