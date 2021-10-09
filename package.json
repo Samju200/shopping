@@ -4,8 +4,12 @@
   "description": "mern",
   "main": "server.js",
   "scripts": {
-    "build": "cd frontend && npm install && npm run build",
-    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+    "build": "cd frontend  && npm run build",
+    "install-client": "cd frontend && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "start": "node backend/server.js",
+    "client": "cd frontend && npm start",
+    "dev": "concurrently \"nodemon backend/server.js\"\"npm run client\""
   },
   "author": "",
   "license": "ISC",
