@@ -8,8 +8,9 @@
     "install-client": "cd frontend && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
     "start": "node backend/server.js",
-    "client": "cd frontend && npm start",
-    "dev": "concurrently \"node backend/server.js\"\"npm run client\""
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
