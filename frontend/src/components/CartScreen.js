@@ -16,6 +16,7 @@ function CartScreen() {
   const handleRemoveCart = (id) => {
     dispatch(removeFromCart(id));
   };
+
   const getCartCount = () => {
     return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0);
   };
